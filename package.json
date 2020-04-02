@@ -2,6 +2,7 @@
   "name": "blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ekaterinakaliago.github.io/countries",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -25,7 +26,9 @@
     "build": "react-scripts build",
     "build-less": "find src/ public/ -name '*.less' -exec  sh -c 'lessc $1 ${1%.less}.css' _ {} \\;",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router": "^5.1.4"
+    "@types/react-router": "^5.1.4",
+    "gh-pages": "^2.2.0"
   }
 }
