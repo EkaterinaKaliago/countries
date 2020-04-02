@@ -47,9 +47,10 @@ class CountryInfo extends Component <CountryInfoProps> {
           </div>
           <div className={styles.flexColumn}>
             <img src={this.props.country.flag} alt={this.props.country.name} className={styles.countryInfoFlag} />
-            <YMaps>
+            <YMaps query={{lang:'en_US', apikey:'f12bd89d-4cc6-4dbe-964a-2f3e4d446d2a'}}>
               <div>
-                <Map state={{center: [this.props.country.latlng[0], this.props.country.latlng[1]], zoom: 4}}
+                <Map
+                  state={{center: [this.props.country.latlng[0], this.props.country.latlng[1]], zoom: 4}}
                   width='400px'>
                   <Circle
                     geometry={[[this.props.country.latlng[0], this.props.country.latlng[1]], this.props.country.area]}
