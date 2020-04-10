@@ -1,14 +1,15 @@
 @import "../../styles/common";
 
 .countryInfo {
-    width:       100%;
-    max-width:   1200px;
-    margin:      0 auto;
-    text-align:  center;
-    font-size:   16px;
-    color:       #484848;
-    position:    relative;
-    padding-top: 30px;
+    width:          100%;
+    max-width:      1200px;
+    margin:         0 auto;
+    text-align:     center;
+    font-size:      16px;
+    color:          #484848;
+    position:       relative;
+    padding-top:    30px;
+    padding-bottom: 50px;
 
     &Title {
         font-size:   28px;
@@ -19,6 +20,11 @@
         max-width:     340px;
         margin-top:    20px;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 370px) {
+            margin-bottom: 25px;
+            max-width:     240px;
+        }
     }
 }
 
@@ -30,6 +36,11 @@
     align-items:    center;
     color:          #000000;
     text-transform: capitalize;
+
+    @media screen and (max-width: 885px) {
+        top:  15px;
+        left: 10px;
+    }
 
     svg {
         width:        30px;
@@ -50,8 +61,35 @@
     display:         flex;
     align-items:     flex-start;
     justify-content: space-evenly;
+
+    @media screen and (max-width: 885px) {
+        flex-wrap:   wrap;
+        align-items: center;
+    }
 }
 
 .flexColumn {
     flex-direction: column;
+
+    &:first-child {
+
+        @media screen and (max-width: 885px) {
+            order:       2;
+            display:     flex;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 100%;
+    }
+}
+
+.map {
+    max-width:       400px;
+    width:           100%;
+    margin:          0 auto;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
 }
