@@ -20,3 +20,44 @@
     flex-wrap: wrap;
     margin:    0 -15px;
 }
+
+.pagination {
+    display:     flex;
+    align-items: center;
+    margin:      25px 0 15px;
+    width:       100%;
+}
+
+.btn {
+    margin:      15px;
+    background:  #ffffff;
+    border:      1px solid #a4a4a4;
+    box-shadow:  none;
+    padding:     0 10px;
+    line-height: 20px;
+    text-align:  center;
+    transition:  all 0.2s ease-in-out;
+
+    &:hover {
+        color:      #ffffff;
+        background: #a4a4a4;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.paginationNumWrap {
+    display:     flex;
+    align-items: center;
+}
+
+.paginationNum {
+    border: none;
+    margin: 2px;
+
+    &.active {
+        background-color: #61dafb;
+    }
+}
